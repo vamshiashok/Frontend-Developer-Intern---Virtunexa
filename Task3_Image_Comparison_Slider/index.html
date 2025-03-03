@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Comparison Slider</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .slider-container {
+            position: relative;
+            width: 100%;
+            max-width: 700px;
+            margin: auto;
+        }
+        .slider {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 4px;
+            background: white;
+            height: 100%;
+            cursor: ew-resize;
+            transform: translateX(-50%);
+        }
+        .img-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+        .img-container img {
+            display: block;
+            width: 100%;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <nav class="bg-gray-800 p-4 text-center">
+        <a href="#section1" class="px-4">Home</a>
+        <a href="#section2" class="px-4">Comparison</a>
+    </nav>
+    
+    <section id="section1" class="text-center py-10">
+        <h1 class="text-3xl font-bold">Mahindra Thar Image Comparison</h1>
+        <p class="text-lg mt-2">Slide to compare different Mahindra Thar settings.</p>
+    </section>
+    
+    <section id="section2" class="flex flex-col items-center py-10">
+        <div class="slider-container">
+            <div class="img-container">
+                <img src="images/Mahindra2.jpg.webp" alt="Mahindra Thar Off-Road">
+                <div class="overlay">
+                    <img src="images/Mahindra1.jpg.webp" alt="Mahindra Thar Urban">
+                </div>
+                <div class="slider"></div>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
